@@ -7,5 +7,11 @@ https://inkscape.org/
 ## Nextjs
 made with next.js
 https://nextjs.org
-### Themes and Animation
+### fancy
 bootstrap
+react-bootstrap
+react-icons
+
+mandala image 
+Photo by <a href="https://unsplash.com/@vaishnavi86?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vaishnavi Chourasia</a> on <a href="https://unsplash.com/s/photos/mandala?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

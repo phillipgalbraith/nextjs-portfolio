@@ -86,45 +86,45 @@ export default function Home() {
                         APIs, responsive pages, 
                         and graphics in the greater Seattle area. 
                       </p>
-                      <div className=" px-1 d-flex container text-secondary link-white">
-                        <div className='d-flex row w-100'> 
-                          <div className=" text-center col-1 p-2 bg-white rounded-circle border border-white" >
-                            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank" rel="noreferrer"> 
-                              <b className="fs-1 text-dark">JS</b>
-                            </a>
-                          </div>
-                          
-                          <div className="mx-1 col-1 p-2 bg-white rounded-circle border border-white fs-7" >
-                            <a href="https://expressjs.com" target="_blank" rel="noreferrer"> 
-                             <div className="fs-4"> <br/></div>
-                              <b className="fs-7 text-dark">express</b>
-                            </a>
-                          </div>
-                          
-                          <div className="col-1 p-2 bg-white text-center  rounded-circle border border-white" >
-                            <a href="https://reactjs.org/" target="_blank" rel="noreferrer" className='link-dark'> 
-                              <div className="fs-4"><RiReactjsFill /></div>
-                              <div className='fs-6'> react </div>
-    
-                            </a> 
-                          </div>
-                          <div className="col-1 mx-1 p-2 bg-white text-center rounded-circle border border-white fs-1" >
-                            <a href="https://www.postgresql.org" target="_blank" rel="noreferrer" className='link-dark'> 
-    
-                              <div className="fs-4">🐘</div>
-                              <div className='fs-6'>postgres</div>
-                            </a>
-                          </div>
-                          <div className="col-1 text-center p-2 bg-white rounded-circle border border-white" >
-                            <a className='link-dark' href="https://redux.js.org" target="_blank" rel="noreferrer"> 
-                              <div className="fs-6"><SiRedux /></div>
-                              <div className="fs-6">redux</div>                          
-                            </a> 
-                          </div>
+                      
+                    </div>
+                    <div className="width -100 d-flex row container text-secondary link-white">
+                        <div className='d-flex flex-wrap w-100'> 
+                        {
+                          [
+                            {
+                              url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
+                              img: "./js.png"
+                            },
+                            {
+                              url: "https://expressjs.com",
+                              img: "./express.png"
+                            },
+                            {
+                              url: "https://reactjs.org/",
+                              img: "./react.png"
+                            },
+                            {
+                              url: "https://redux.js.org",
+                              img: "./redux.png"
+                            }, 
+                            {
+                              url: "https://www.postgresql.org",
+                              img: "./postgres.png"
+                            },
+                          ].map( e => {
+                            return (
+                                <div className=" inline-block me-2 " >
+                                  <a href={e.url} target="_blank" rel="noreferrer"> 
+                                    <img src={e.img} className="bg-white"/>
+                                  </a>
+                                </div>
+                              )
+                          })
+                        }
+                         
                         </div>
                       </div>
-                    </div>
-                    
                   </div>
                 </div>
               </div>
@@ -139,46 +139,45 @@ export default function Home() {
           </h3>
           <div className="row">
  
-            <div className="col-sm pb-2">
-              <a href="https://phillipgalbraith.github.io/portfolio-site/">
-                <div className="card link-success bg-black my-2" >
-                  <img src="./vanillaPortfolio.png" className="card-img-top" alt="..."/>
-                  <div className="card-body">
-                    <h5 className="card-title">Portfolio</h5>
-                  
-                    <p className="card-text ">
-                      plain JS/HTML/CSS
-                    </p>
-                  </div>
+            { 
+              [
+                {
+                  img: "./vanilla.png",
+                  url: "https://phillipgalbraith.github.io/portfolio-site/",
+                  h5: "Portfolio",
+                  p: "plain JS/HTML/CSS"
+                },
+                {
+                  img: "./market.png",
+                  url: "https://marketplace-f9a23.web.app/",
+                  h5: "Market",
+                  p: "React/Redux/Postgres"
+                },
+                {
+                  img: "./feast.png",
+                  url: "https://phillipgalbraith.github.io/portfolio-site/",
+                  h5: "Feast Planner",
+                  p: "React/Redux/Express"
+                }
+              ].map(e => {
+                return (
+                  <div className="col-sm pb-2">
+                  <a className="link-success" href={e.url}>
+                    <div className="card bg-black my-2" >
+                      <img src={e.img} className="card-img-top" alt="..."/>
+                      <div className="card-body">
+                        <h5 className="card-title">{e.h5}</h5>
+                      
+                        <p className="card-text ">
+                          {e.p}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div className="col-sm pb-2">
-              <a href="https://marketplace-f9a23.web.app/">
-                <div className="card link-success bg-black  my-2" >
-                  <img src="./marketplace.png" className="card-img-top" alt="..."/>
-                  <div className="card-body">
-                    <h5 className="card-title">Marketplace</h5>
-                    <p className="card-text">
-                      React/Redux/Postgres
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-sm row">
-              <a href="https://feast-planner-2b2ea.web.app/dashboard">
-                <div className="card link-success bg-black my-2" >
-                  <img src="./feastPlanner.png" className="card-img-top" alt="..."/>
-                  <div className="card-body">
-                    <h5 className="card-title">Feast Planner</h5>
-                    <p className="card-text">
-                    React/Redux/Express
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
+                )
+              })
+            }
           </div>
           
         </div>

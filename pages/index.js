@@ -44,7 +44,7 @@ export default function Home() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link id="home" href="#home" >
+                <Nav.Link  href="#home" >
                   <span className="text-black">
                     <b>Phillip Galbraith</b>
                   </span>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="container">
             <h1 className='pt-5 '>Phillip Galbraith</h1>
     
-            <div className="container col">
+            <div className=" col">
               <div className="row">
                 <div className="row">
        
@@ -202,10 +202,10 @@ export default function Home() {
               <Navbar expand="lg">
                 <Container >
                   <Navbar.Brand href="#home">    
-                    <span className="text-white">Contacts</span>
+                    <span className="text-white">Contact</span>
                   </Navbar.Brand>
                     <Nav className="me-auto">
-                      <Nav.Link id="home" href="#contacts" >
+                      <Nav.Link  href="#contact" >
                         <span className="text-white">
                           <BsEnvelope />
                           {" "}
@@ -221,11 +221,12 @@ export default function Home() {
                         </span>
                       </Nav.Link>  
                       <Nav.Link href="https://linkedin.com/in/phillip-galbraith-web" >
-                      <span className="text-white">
+                        <span className="text-white">
                           <BsLinkedin />
                           {" "}
                           <b>LinkedIn</b> 
-                        </span>                </Nav.Link>  
+                        </span>                
+                      </Nav.Link>  
                     </Nav>
                 </Container>
               </Navbar>

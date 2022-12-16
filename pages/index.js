@@ -39,7 +39,7 @@ export default function Home() {
         <Navbar expand="lg" fixed="top" bg="secondary gradient">
           <Container >
             <Navbar.Brand href="#home">    
-            <img src="./bitmap.png" className=""/>  
+            <img src="./navbarIcon.png" className=""/>  
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -68,55 +68,77 @@ export default function Home() {
         </Navbar>
 
       </header>
-      <main className="bg-gradient text-black mt-5">
-        <div className="bg-success bg-gradient">
+      <main className="bg-gradient text-black pt-5">
+        <div className="bg-success ">
 
-          <div className="container">
-            <h1 className='pt-5 '>Phillip Galbraith</h1>
-    
+          <div className="container">    
             <div className=" col">
               <div className="row">
                 <div className="row">
        
-                  <div className="row mb-3">
+                  <div className="row ">
                    
-                    <div id="about" className='col-lg pe-5 me-5'>
-                      <p className="fs-4">
-                        I make, modify, and modularize 
-                        APIs, responsive pages, 
-                        and graphics in the greater Seattle area. 
-                      </p>
+                    <div id="about" className='col  pt-5 pe-5 me-5'>
+                      <div className='row'>
+                        <div className='col-4 pe-2'>
+                          <img src="./portrait.png" alt="portrait"/>
+                        </div>
+                        <div className='col-8'>
+                          <p className="fs-4">
+                            Hey, I'm Phillip Galbraith.  I make, modify, and modularize 
+                            APIs, responsive pages, 
+                            and graphics in the greater Seattle area. 
+                          </p>
+                          <p className="fs-5">
+                            This page:    
+                            <a href="https://nextjs.org/" target="_blank" rel="noreferrer" className="link-dark"> 
+                              {" "}  NextJS {" "}<img src="/next.png" alt="next js" className="bg-white rounded-circle"/>
+                            </a>
+                            {" "}&{" "}
+                            <a href="https://react-bootstrap.github.io/" target="_blank" rel="noreferrer"  className="link-dark"> 
+                              react-bootstrap{" "} <img src="/react-bootstrap.png" alt="react bootstrap" className="rounded-circlebg-white"/>
+                            </a>
+                          </p>
+                        </div>
+
+                      </div>
+                      
                       
                     </div>
                     <div className="width -100 d-flex row container text-secondary link-white">
-                        <div className='d-flex flex-wrap w-100'> 
+                        <div className='d-flex pb-3 flex-wrap justify-content-end w-100'> 
                         {
                           [
                             {
                               url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
-                              img: "./js.png"
+                              img: "./js.png",
+                              alt: "JavaScript icon"
                             },
                             {
                               url: "https://expressjs.com",
-                              img: "./express.png"
+                              img: "./express.png",
+                              alt: "express icon"
                             },
                             {
                               url: "https://reactjs.org/",
-                              img: "./react.png"
+                              img: "./react.png",
+                              alt: "react icon"
                             },
                             {
                               url: "https://redux.js.org",
-                              img: "./redux.png"
+                              img: "./redux.png",
+                              alt: "redux icon"
                             }, 
                             {
                               url: "https://www.postgresql.org",
-                              img: "./postgres.png"
+                              img: "./postgres.png",
+                              alt: "postgresql icon"
                             },
                           ].map( e => {
                             return (
-                                <div className=" inline-block me-2 " >
+                                <div className="pb-2 inline-block me-2 " >
                                   <a href={e.url} target="_blank" rel="noreferrer"> 
-                                    <img src={e.img} className="bg-white"/>
+                                    <img src={e.img} alt={e.alt} className="bg-white"/>
                                   </a>
                                 </div>
                               )

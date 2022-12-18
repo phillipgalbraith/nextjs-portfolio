@@ -5,10 +5,6 @@ import {
   BsEnvelope,
   BsGithub,
  } from "react-icons/bs";
- import {
-  RiReactjsFill,
- } from "react-icons/ri";
-import {  SiRedux } from 'react-icons/si';
 import { useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -34,33 +30,35 @@ export default function Home() {
         <link href="/icon.png" rel="icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div id="home"></div>
-      <header className="container row">
+      <header id="home" className="container row">
         <Navbar expand="lg" fixed="top" bg="secondary gradient">
           <Container >
             <Navbar.Brand href="#home">    
-            <img src="./navbarIcon.png" className=""/>  
+              <img src="./navbarIcon.png" className=""/>  
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link  href="#home" >
-                  <span className="text-black">
+                  <span className="text-white">
                     <b>Phillip Galbraith</b>
                   </span>
                 </Nav.Link>
             
                 <Nav.Link href="#home" >
-                  <b>About</b>
+                  <b className="text-white">About</b>
                 </Nav.Link>  
                 <Nav.Link href="#portfolio" >
-                  <b>Portfolio</b>
+                  <b className="text-white">Portfolio</b>
                 </Nav.Link>  
                 <Nav.Link href="#resume" >
-                  <b>Resume</b>
+                  <b className="text-white">Resume</b>
                 </Nav.Link>
                 <Nav.Link href="#contact" >
-                  <b>Contact</b>
+                  <b className="text-white">Contact</b>
+                </Nav.Link>
+                <Nav.Link href="/posts/p1">
+                  <b className="text-white">Blog</b>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -78,12 +76,12 @@ export default function Home() {
        
                   <div className="row ">
                    
-                    <div id="about" className='col  pt-5 pe-5 me-5'>
-                      <div className='row'>
-                        <div className='col-4 pe-2'>
+                    <div id="about" className='col d-flex flex-wrap pt-5'>
+                      <div className='row d-flex flex-wrap justify-content-between'>
+                        <div className='col pb-2'>
                           <img src="./portrait.png" alt="portrait"/>
                         </div>
-                        <div className='col-8'>
+                        <div className='col '>
                           <p className="fs-4">
                             Hey, I'm Phillip Galbraith.  I make, modify, and modularize 
                             APIs, responsive pages, 
@@ -92,11 +90,11 @@ export default function Home() {
                           <p className="fs-5">
                             This page:    
                             <a href="https://nextjs.org/" target="_blank" rel="noreferrer" className="link-dark"> 
-                              {" "}  NextJS {" "}<img src="/next.png" alt="next js" className="bg-white rounded-circle"/>
+                              {" "}  NextJS {" "}<img src="/next.png" alt="next js" className="bg-gradient rounded "/>
                             </a>
                             {" "}&{" "}
                             <a href="https://react-bootstrap.github.io/" target="_blank" rel="noreferrer"  className="link-dark"> 
-                              react-bootstrap{" "} <img src="/react-bootstrap.png" alt="react bootstrap" className="rounded-circlebg-white"/>
+                              react-bootstrap{" "} <img src="/react-bootstrap.png" alt="react bootstrap" className="rounded bg-gradient"/>
                             </a>
                           </p>
                         </div>
@@ -106,7 +104,7 @@ export default function Home() {
                       
                     </div>
                     <div className="width -100 d-flex row container text-secondary link-white">
-                        <div className='d-flex pb-3 flex-wrap justify-content-end w-100'> 
+                        <div className='d-flex pb-3 flex-wrap w-100'> 
                         {
                           [
                             {
@@ -184,19 +182,19 @@ export default function Home() {
               ].map(e => {
                 return (
                   <div className="col-sm pb-2">
-                  <a className="link-success" href={e.url}>
-                    <div className="card bg-black my-2" >
-                      <img src={e.img} className="card-img-top" alt="..."/>
-                      <div className="card-body">
-                        <h5 className="card-title">{e.h5}</h5>
-                      
-                        <p className="card-text ">
-                          {e.p}
-                        </p>
+                    <a className="link-success" href={e.url}>
+                      <div className="card bg-black my-2" >
+                        <img src={e.img} className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                          <h5 className="card-title">{e.h5}</h5>
+                        
+                          <p className="card-text ">
+                            {e.p}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </div>
                 )
               })
             }
